@@ -1,25 +1,28 @@
+<% for(c=0;c < contactList.length;c++) { %>
+  
   <html>
   <head><meta charset='utf-8'></head>
   <body>
-    <p>Hey <%= firstName %>,</p>
+    <p>Hey <%= contactList[c].firstName %>,</p>
+    
     <br>
     <p>
-      How are you doing? I'm doing well. It's been like <%= numMonthsSinceContact %> months
-      since we last talked. I'm learning to code Part-time at Fullstack Academy and enjoying 
-      my time.
+      How's it going?  Well, I hope! So I'm taking a 6 months course at Fullstack Academy it's Looking good so far. I'm blogging about the the stuff I'm learning. Hope you enjoy the spin I've put on it. 
     </p>
       <p>
-    I've been blogging about my experiences at Fullstack on my blog. 
-    Look at my most recent posts:
+    Here's a list of this week posts
     <ul>
       <% for(var i=0; i<latestPosts.length; i++) {%>
-         <li><a href=<%= latestPosts[i].href %>> <%= latestPosts[i].title %></a>  </li>
+         <li><a href=<%= latestPosts[i].post_url %>> <%= latestPosts[i].title %></a>  </li>
       <% } %>
     </ul>
   </p>
     <p>
-      Talk soon,<br>
-      Kevin O'Brien
+      Laters<br>
+          KOB
+
     </p>
   </body>
   </html>
+  <% } %>
+  
